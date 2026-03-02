@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}   
+
+body{
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.container{
+    max-width: 700px;
+    margin: 60px auto;
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #777;
+    margin-bottom: 50px;
+}
+
+.timeline {
+    position: relative;
+    margin: 0 auto 50px auto;
+    padding-left: 0;
+    list-style: none;
+}
+
+.timeline::before {
+    content : "";
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: #ccc;
+    transform: translateX(-50%);
+}
+
