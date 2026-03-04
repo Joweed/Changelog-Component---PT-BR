@@ -6,35 +6,40 @@
 
 body{
   font-family: "Arimo", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
+  background: #f3f3f3;
 }
 
 .container{
-    max-width: 700px;
+    max-width: 800px;
     margin: 60px auto;
     text-align: center;
+    background: #ffffff;
+    padding: 60px 40px;
+    border-radius: 30px;
+    border: 2px solid #222;
 }
 
+/* Título */
 h1{
     margin-bottom: 10px;
+    font-size: 32px;
 }
 
 .subtitle {
     color: #777;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 }
 
+/* Timeline */
 .timeline {
     position: relative;
-    margin: 0 auto 50px auto;
-    padding-left: 0;
     list-style: none;
+    margin-bottom: 60px;
 }
 
+/* Linha vertical */
 .timeline::before {
-    content : "";
+    content: "";
     position: absolute;
     left: 50%;
     top: 0;
@@ -44,3 +49,54 @@ h1{
     transform: translateX(-50%);
 }
 
+/* Item */
+.timeline-item {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px 0;
+}
+
+/* Bolinha */
+.timeline-item::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    background: #111;
+    border-radius: 50%;
+    transform: translateX(-50%);
+}
+
+/* Data */
+.timeline-date {
+    width: 45%;
+    text-align: right;
+    color: #888;
+    font-size: 14px;
+}
+
+/* Conteúdo */
+.timeline-content {
+    width: 45%;
+    text-align: left;
+    font-weight: 500;
+}
+
+/* Botão */
+.btn{
+    display: inline-block;
+    padding: 12px 28px;
+    background: #111;
+    color: #fff;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+.btn:hover{
+    background: #333;
+}
